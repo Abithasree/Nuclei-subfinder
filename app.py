@@ -14,12 +14,12 @@ os.environ["GOBIN"] = str(os.getcwd())+"/go/bin"
 subprocess.run(["chmod -R +x "+str(os.getcwd())+"/go/bin/go"], shell=True)
 
 ## Local environment (If you don't have go installed or showing errors then try to use this)
-subprocess.run([str(os.getcwd())+"/go/bin/go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest"], shell=True)
-subprocess.run([str(os.getcwd())+"/go/bin/go install -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei@latest"], shell=True)
+# subprocess.run([str(os.getcwd())+"/go/bin/go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest"], shell=True)
+# subprocess.run([str(os.getcwd())+"/go/bin/go install -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei@latest"], shell=True)
 
 ## Local environment (If you have go installed already then use this)
-# subprocess.run(["go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest"], shell=True)
-# subprocess.run(["go install -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei@latest"], shell=True)
+subprocess.run(["go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest"], shell=True)
+subprocess.run(["go install -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei@latest"], shell=True)
 
 
 @app.get("/api/scanner1/{domain}")
